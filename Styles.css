@@ -1,0 +1,112 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* farge variabler */
+:root {
+  --bg-dark: oklch(0.1 0.03 223);
+  --bg: oklch(0.15 0.03 223);
+  --bg-light: oklch(0.2 0.03 223);
+
+  --text: oklch(0.96 0.06 223);
+  --text-muted: oklch(0.76 0.06 223);
+
+  --highlight: oklch(0.5 0.06 223);
+  --border: oklch(0.4 0.06 223);
+
+  --primary: oklch(0.76 0.1 223);
+  --secondary: oklch(0.76 0.1 43);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--bg-light), var(--bg));
+  color: var(--text);
+}
+
+/* navigasjons baren */
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(28, 59, 74, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.4rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.navn {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* navbar knappe med funksjon */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.navbar-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+/* hover effekt på navbar knappene */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--secondary);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-links a.active {
+  color: var(--secondary);
+}
+
+
+strong {
+  color: var(--secondary);
+  font-weight: 600;
+}

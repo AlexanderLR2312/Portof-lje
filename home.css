@@ -1,0 +1,124 @@
+/* Variabler for farge kode */
+:root {
+  --bg-dark: oklch(0.1 0.03 223);
+  --bg: oklch(0.15 0.03 223);
+  --bg-light: oklch(0.2 0.03 223);
+
+  --text: oklch(0.96 0.06 223);
+  --text-muted: oklch(0.76 0.06 223);
+
+  --highlight: oklch(0.5 0.06 223);
+  --border: oklch(0.4 0.06 223);
+
+  --primary: oklch(0.76 0.1 223);
+  --secondary: oklch(0.76 0.1 43);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* teksen over hodet mitt */
+.text-top {
+  max-width: 900px;
+  margin: 4rem auto 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+/* hero section, content og image er hvordan bildet mitt skal se ut */
+
+.hero-section {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  width: 80vw;
+  max-width: 1400px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 850px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* teksten som er over hendene mine */
+.hand-text {
+  position: absolute;
+  max-width: 320px;
+  padding: 16px 32px;
+  line-height: 1.6;
+  z-index: 2;
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.hand-text strong {
+    font-size: 2.5em;
+    display: inline-block;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* teksten som kommer når du hoverer */
+.small-text { 
+  font-size: 1.2rem !important; 
+  letter-spacing: 0.14em!important;
+  text-transform: uppercase!important;
+  color: var(--muted)!important;
+  border-left: thin #071821!important;
+}
+
+
+.hand-text strong:hover {
+    transform: scale(1.1);
+    color: var(--text);
+    text-shadow: 0px 10px 20px var(--secondary)
+}
+
+/* posisjon på hendene */
+.hand-left {
+  left: 17%;
+  bottom: 40%;
+}
+
+.hand-right {
+  right: 23%;
+  bottom: 40%;
+}
+
+/* teksten nederst i høyre gjørne */
+.hero-tagline {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-left: thin #071821;
+}
+
+

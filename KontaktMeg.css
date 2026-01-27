@@ -1,0 +1,83 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* farge variabler */
+:root {
+  --bg-dark: oklch(0.1 0.03 223);
+  --bg: oklch(0.15 0.03 223);
+  --bg-light: oklch(0.2 0.03 223);
+
+  --text: oklch(0.96 0.06 223);
+  --text-muted: oklch(0.76 0.06 223);
+
+  --highlight: oklch(0.5 0.06 223);
+  --border: oklch(0.4 0.06 223);
+
+  --primary: oklch(0.76 0.1 223);
+  --secondary: oklch(0.76 0.1 43);
+}
+
+
+/* container med kontakt meg informasjonen */
+.contact-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: var(--highlight);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: "manrope";
+    font-weight: 200;
+    text-align: center;
+}
+
+p {
+    font-family: "manrope";
+    font-weight: 100;
+    text-align: center;
+    color: var(--text);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* der man skriver in teksten */
+input, textarea {
+    font-family: "manrope";
+    font-weight: 100;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* send melding knappen */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-light);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
